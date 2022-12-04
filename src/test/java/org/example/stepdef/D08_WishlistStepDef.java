@@ -62,7 +62,6 @@ public class D08_WishlistStepDef {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         String number = home.Qty().getAttribute("value");
         int num = Integer.parseInt(number);
-        //System.out.println(num);
         if(num > 0){
            check = true ;
         }

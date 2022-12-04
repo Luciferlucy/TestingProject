@@ -37,14 +37,13 @@ public class homepage {
         return driver.findElements(By.xpath("//ul[@class=\"top-menu notmobile\"]/li"));
     }
     public List<WebElement> locator (int selectedCategory){
-        //return driver.findElements(By.xpath(locator));
         return driver.findElements(By.xpath("(//ul[@class='top-menu notmobile']//ul)["+selectedCategory+"]/li"));
     }
     public WebElement title(){
         return driver.findElement(By.cssSelector("div[class=\"page-title\"]"));
     }
 
-    public WebElement controlbutton(String x){
+    public WebElement controlbutton(int x){
         return driver.findElement(By.cssSelector("a[rel=\""+x+"\"]"));
     }
     public WebElement img(){
