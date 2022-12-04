@@ -56,6 +56,7 @@ public class D08_WishlistStepDef {
 
     }
 
+    boolean check = false;
     @Then("get QTy value bigger than zero")
     public void getQTyValueBiggerThan() {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -63,9 +64,9 @@ public class D08_WishlistStepDef {
         int num = Integer.parseInt(number);
         //System.out.println(num);
         if(num > 0){
-           boolean check = true ;
-           Assert.assertTrue(check);
+           check = true ;
         }
+        Assert.assertTrue(check);
 
     }
 }
