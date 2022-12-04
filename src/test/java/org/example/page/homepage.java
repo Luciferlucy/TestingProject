@@ -44,8 +44,8 @@ public class homepage {
         return driver.findElement(By.cssSelector("div[class=\"page-title\"]"));
     }
 
-    public List<WebElement> controlbutton(){
-        return driver.findElements(By.cssSelector("div[class=\"nivo-controlNav\"]"));
+    public WebElement controlbutton(String x){
+        return driver.findElement(By.cssSelector("a[rel=\""+x+"\"]"));
     }
     public WebElement img(){
         return driver.findElement(By.cssSelector("div[id=\"nivo-slider\"]"));
